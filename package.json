@@ -1,0 +1,24 @@
+{
+  "name": "chat-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ./src/index.js",
+    "dev": "env-cmd -f ./config/dev.env nodemon ./src/index.js",
+    "test": "env-cmd -f ./config/test.env jest --watch --runInBand",
+    "start-mongo": "/home/roy/mongodb/bin/mongod --dbpath=/home/roy/mongodb-data",
+    "kill-process-3000": "sudo kill -9 $(sudo lsof -t -i:3000)"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "jest": "^25.2.7",
+    "nodemon": "^2.0.2",
+    "path": "^0.12.7"
+  },
+  "devDependencies": {
+    "env-cmd": "^10.1.0"
+  }
+}
